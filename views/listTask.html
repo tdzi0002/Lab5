@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>To do App</title>
+    <link rel="stylesheet" href="styles.css">
+</br>
+</head>
+
+<body>
+
+    <img id="tick" src = "logo-javascript.png" alt=""></br>
+	<header>
+		<h1>
+            <a href="index.html">Home</a>  </br>  
+            <a href="newTask.html">Add new task</a></br>
+            </br>
+        </br>
+        </h1>
+    </header>
+    
+    <table>
+            <tr>
+                <td>Name</td>
+                <td>Due Date</td>
+                <td>Description</td>
+            </tr>
+            <% for ( var i =0; i< taskDb.length;i++){ %>
+                <tr>
+                    <td>
+                        
+                        <%= taskDb[i].taskName %>
+                    </td>
+                    <td>
+                        <%= taskDb[i].taskDue %>
+                    </td>
+                    <td>
+                        <%= taskDb[i].taskDesc %>
+                    </td>
+                </tr>
+                <% }%>
+    </table>
+
+</body>
+
+</html>
